@@ -34,7 +34,7 @@ public class SampleController {
         }
     }
     @PutMapping("/{id}")
-    public ResponseEntity<?> updatePolicy(@PathVariable Long id, @RequestBody Policy policyDetails){
+    public ResponseEntity<?> updatePolicy(@PathVariable Long id, @Valid @RequestBody Policy policyDetails){
         try {
             Policy updatedPolicy = policyService.updatePolicy((long) id,policyDetails);
             return ResponseEntity.ok(updatedPolicy);
