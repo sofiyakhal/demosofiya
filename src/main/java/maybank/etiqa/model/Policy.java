@@ -19,12 +19,13 @@ import java.time.LocalDate;
         @GeneratedValue(strategy = GenerationType.AUTO)
         private Long id;
         @NotBlank(message= "Policy number is required")
-        @Pattern( regexp = "^[A-Z0-9]{5,10}$", message = "Policy number must be between 5 and 10 characters, containing only uppercase letters and digits")
+        @Pattern( regexp = "^[A-Z0-9]{5,10}$", message = "Policy number must be between 5 and 10 characters, " +
+                "containing only uppercase letters and digits")
         private String policyNumber;
         @NotBlank(message= "Holder name is required")
         private String holderName;
         @NotNull(message= "Premium is required")
-        @DecimalMin(value= "0.0", inclusive = false, message = "premium must be greater than zer0")
+        @DecimalMin(value= "0.0", inclusive = false, message = "Premium must be greater than zero")
         private BigDecimal premium;
         private LocalDate startDate;
         private LocalDate endDate;
