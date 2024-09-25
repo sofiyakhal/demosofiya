@@ -16,7 +16,7 @@ import java.time.LocalDate;
     @Entity
     public class Policy {
         @Id
-        @GeneratedValue(strategy = GenerationType.AUTO)
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
         @NotBlank(message= "Policy number is required")
         @Pattern( regexp = "^[A-Z0-9]{5,10}$", message = "Policy number must be between 5 and 10 characters, " +
