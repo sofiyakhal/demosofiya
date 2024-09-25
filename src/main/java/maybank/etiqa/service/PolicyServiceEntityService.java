@@ -3,7 +3,7 @@ package maybank.etiqa.service;
 import maybank.etiqa.model.PolicyServiceEntity;
 import maybank.etiqa.repository.PolicyServiceEntityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Service; //test
 
 import java.util.List;
 
